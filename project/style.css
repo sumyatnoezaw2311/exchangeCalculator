@@ -1,0 +1,365 @@
+:root{
+    --primary: #8A80BC;
+    --secondary: #707070;
+    --light: #fff;
+    --dark: #000000;
+    --night-secondary : #a9acb1;
+    --night-secondary-soft : #3a3b3c;
+}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+@font-face{
+    font-family: "mm";
+    font-weight: normal;
+    src: url(..//project/font/MyanmarSagar.ttf);
+}
+.mm{
+    font-family: "mm";
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans',sans-serif, 'mm';
+    color: var(--secondary);
+}
+:root{
+    --primary: #8A80BC;
+    --secondary: #707070;
+    --light: #fff;
+    --dark: #000000;
+}
+.container{
+    width: 800px;
+    height: 100vh;
+    margin: 0 auto;
+    /* overflow-y: scroll; */
+    padding: 20px;
+}
+.switch {
+    position: absolute;
+    top: 20px;
+    right: 300px;
+    width: 50px;
+    height: 20px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--dark);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  .moon{
+      color: var(--light);
+      position: absolute;
+      right: 7px;
+      top: 4px;
+      font-size: 12px;
+      pointer-events: none;
+  }
+  .sun{
+      left: 7px;
+  }
+  input:checked + .slider {
+    background-color: var(--primary);
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+/* .darkmodeToggle{
+    position: absolute;
+    right: 15px;
+    top: 50px;
+}
+.dark{
+    background-color: var(--dark);
+}
+.darkmodeToggle input:checked{
+    color: var(--light);
+} */
+.output{
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.logoAndTitle{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+.logo{
+    width: 70px;
+    padding: 15px 0px 15px 15px;
+}
+.brandContainer{
+    padding: 0px 10px;
+    font-size: 40px;
+    color: var(--secondary);
+}
+.result{
+    font-size: 40px;
+    color: var(--secondary);
+}
+.divider{
+    background-color: var(--secondary);
+    width: 100%;
+    height: 2px;
+    margin-bottom: 20px;
+}
+.calculate{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+label{
+    padding: 10px 0px;
+    display: block;
+}
+.inputTag{
+    padding: 10px 15px;
+    outline: none;
+    border: 1px solid var(--secondary);
+    border-radius: 6px;
+    width: 150px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+#input{
+    text-align: right;
+}
+select {
+    -webkit-appearance: none;
+    appearance: none;
+  }
+.calcBtn button{
+    padding: 25px 45px;
+    border-radius: 10px;
+    background-color: var(--primary);
+    border: none;
+    color: var(--light);
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.calcBtn button:active{
+    background-color: #9790b9;
+}
+table{
+    margin-top: 30px;
+    width: 100%;
+    border-radius: 10px;
+}
+table, th, td{
+    border: solid 3px var(--light);
+    border-collapse: collapse;
+    padding: 8px 0px;
+    border-radius: 10px;
+}
+ tr:hover{
+    background-color: rgb(214, 210, 210);
+}
+th{
+    background-color: var(--primary);
+    color: var(--light);
+}
+tr{
+    text-align: center;
+    background-color: var(--light);
+    color: var(--secondary);
+}
+.recordedResult{
+    text-align: end;
+    padding-right: 10px;
+}
+.noRecord{
+    text-align: center;
+    color: var(--dark);
+}
+.clearBtn{
+    padding: 12px 18px;
+    margin-left: 10px;
+    margin-top: 20px;
+    background-color: var(--primary);
+    color: var(--light);
+    border: none;
+    border-radius: 10px;
+}
+.delete{
+    color: var(--primary);
+}
+.FromTo{
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
+}
+
+/* ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px var(--primary); 
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--secondary);
+    border-radius: 10px;
+  } */
+  @media(max-width: 480px){
+      .container{
+          margin-top: 20px;
+          width: 97%;
+      }
+      .switch{
+          top: 0;
+      }
+      .output{
+          padding: 0;
+          display: block;
+          margin-bottom: 10px;
+      }
+      .logoAndTitle{
+          width: 100%;
+          text-align: left;
+      }
+      .logo{
+        width: 50px;
+        padding: 10px 0px 10px 10px;
+      }
+      .brandContainer{
+          font-size: 30px;
+      }
+      .result{
+          display: block;
+          width: 100%;
+          text-align: right;
+          font-size: 50px;
+      }
+      .divider{
+          margin-bottom: 10px;
+      }
+      .calculate{
+          display: block;
+      }
+      .input{
+          width: 100%;
+      }
+      .input .inputTag{
+          width: 100%;
+      }
+      .FromTo{
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          margin-bottom: 10px;
+      }
+      .from{
+          width: 45%;
+      }
+      .from label{
+        width: 100%;
+      }
+      #from{
+          width: 100%;
+      }
+      .to{
+          width: 45%;
+      }
+      .to label{
+        width: 100%;
+      }
+      #to{
+          width: 100%;
+      }
+      .calcBtn{
+          text-align: center;
+      }
+      .calcBtn button{
+          width: 100%;
+          font-size: 15px;
+          padding: 20px;
+          border-radius: 0;
+      }
+      .record{
+          overflow: hidden;
+          font-size: 10px;
+      }
+      th{
+          padding-left: 5px;
+          padding-right: 5px;
+      }
+      .changeWidth{
+        width: 40%;
+    }
+  }
+  body.nightMode{
+      background-color: #19191a;
+      transition: 0.3s;
+  }
+  .nightMode .brandContainer,.nightMode .result,.nightMode label{
+      color: var(--light);
+  }
+  .nightMode input,.nightMode select{
+      background-color: var(--night-secondary-soft);
+      color: var(--night-secondary);
+  }
+  .nightMode ::placeholder{
+      color: var(--night-secondary);
+  }
+  .nightMode tr{
+      background-color: var(--night-secondary-soft);
+  }
+  .nightMode tr td{
+      color: var(--night-secondary);
+  }
+  .nightMode tr:hover{
+      background-color: #4a4b4c;
+  }
+  .nightMode table,.nightMode th,.nightMode td{
+    border: solid 3px #19191a;
+    transition: 0.1s;
+}
