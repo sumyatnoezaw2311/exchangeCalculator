@@ -63,7 +63,7 @@
                 <div class="to">
                     <label>To</label>
                     <select class="inputTag selectbtnTo" type="text" id="to" required>
-
+                        <option value="1" selected>MMK</option>
                     </select>
                 </div>
             </div>
@@ -87,7 +87,16 @@
             <button class="clearBtn">ClearAll</button>
         </div>
     </div>
-    <script src="data.js"></script>
+    <?php
+
+        $a = file_get_contents("http://forex.cbm.gov.mm/api/latest");
+        echo $a;
+
+    ?>
+    <script>
+        let data = <?php echo $a; ?>;
+        console.log(data.rates)
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
